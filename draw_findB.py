@@ -49,7 +49,7 @@ fig, ax = plt.subplots(figsize=(12, 6), dpi=200, facecolor='w', edgecolor='k')
 rects1 = ax.bar(x - width/2, old_count, width, label='Only jets')
 rects2 = ax.bar(x + width/2, new_count, width, label='Jets and SV')
 
-ax.set_ylabel('Number of Entries')
+ax.set_ylabel('Fraction of Events')
 ax.set_title('Acceptance and 4-body mass per topological region')
 ax.set_xticks(x)
 ax.set_xticklabels(name_cats)
@@ -114,6 +114,6 @@ ax5.text(0.15,0.8, '$\sigma = {:03.1f}\,$ GeV'.format(df[new_cats[5]]['hm'].std(
 ax.text(0.04, 0.83, "ATLAS", fontweight='bold', fontstyle='italic', verticalalignment='bottom', transform=ax.transAxes)
 ax.text(0.1, 0.83, "Simulation Internal", verticalalignment='bottom', transform=ax.transAxes)
 ax.text(0.04, 0.77, r'$ZH, H\rightarrow aa\rightarrow 4b$', verticalalignment='bottom', transform=ax.transAxes)
-ax.text(0.04, 0.73, r'$m_{a} = 50\,$GeV', verticalalignment='bottom', transform=ax.transAxes)
+ax.text(0.04, 0.73, r'$m_{a} = 60\,$GeV', verticalalignment='bottom', transform=ax.transAxes)
 
 plt.savefig('categories.png')
