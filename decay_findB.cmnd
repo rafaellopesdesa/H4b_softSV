@@ -1,0 +1,24 @@
+Beams:eCM = 13000
+Tune:pp = 21
+
+Higgs:useBSM = on
+
+23:onMode = off
+23:onIfAny = 13
+
+35:m0 = 125.0
+35:mWidth = 0.00407
+35:mMin = 124.
+35:mMax = 126.
+35:onMode = off
+35:onIfAny = 36
+
+36:m0 = 60.0
+36:mWidth = 0.00407
+36:mMin = 50.
+36:mMax = 70.
+36:onMode = off
+36:onIfAny = 5
+
+HiggsBSM:ffbar2H2Z= on
+
