@@ -19,7 +19,7 @@ You also need numpy, pandas, ...
 python generate_findB.py [number of events] [rng seed]
 ```
 
-The output will be called data_secvtx_[seed].h5, and the dataframe is stored with key *cats*.
+The output will be called `data_secvtx_[seed].h5`, and the dataframe is stored with key *cats*.
 
 ## How to draw
 
