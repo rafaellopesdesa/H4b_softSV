@@ -14,18 +14,21 @@ import pandas as pd
 # ok, you need numpy and pandas
 
 from skhep.math import LorentzVector
+from particle.pdgid import has_bottom, is_hadron, charge
 
 from copy import copy
 from sys import argv, stdout
 
 from itertools import combinations, permutations
 
-from PIDUtils import *
-
 DTYPE_NP = np.dtype([('E', 'f8'), ('px', 'f8'), ('py', 'f8'), ('pz', 'f8'), ('pT', 'f8'),
                      ('mass', 'f8'), ('rap', 'f8'), ('eta', 'f8'), ('theta', 'f8'),
                      ('phi', 'f8'), ('prodx', 'f8'), ('prody', 'f8'), ('prodz', 'f8'),
                      ('prodt', 'f8'), ('pdgid', 'i4'), ('status', 'i4')])
+
+
+def isBottomHadron(pdgid):
+    return (has_bottom(pdgid) and is_hadron(pdgid))
 
 def dphi(dphi):    
     delta_phi = copy(dphi)
@@ -117,7 +120,7 @@ def find_sv_hadron(b_hadron):
     tracks = []
     for part in last_b_hadron.descendants():
         if part['status'] != 1: continue
-        if not isCharged(part['pdgid']): continue
+        if charge(part['pdgid']) == 0: continue
         if part['pT'] < 0.5: continue
         if abs(part['eta']) > 2.5: continue
         tracks.append(part)

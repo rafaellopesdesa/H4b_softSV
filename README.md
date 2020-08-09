@@ -6,6 +6,7 @@
 pip install numpythia --user
 pip install pyjet --user
 pip install scikit-hep --user
+pip install particle --user
 ```
 
 You also need numpy, pandas, ...
