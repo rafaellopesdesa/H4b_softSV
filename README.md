@@ -24,5 +24,16 @@ The output will be called data_secvtx_[seed].h5, and the dataframe is stored wit
 python draw_findB.py [h5 file]
 ```
 
+## Pythia configuation and example run
+
+The Pythia configuration is set on `decay_findB.cmnd`. There you can set:
+
+- Pythia tune: currently ATLAS A14 (line *Tune:pp*)
+- a-boson mass: currently 60 GeV (line *36:m0*, you should also set *36:mMin* and *36:mMax*)
+
+There is an example run with this setup in `data_secvtx_100.h5` with 50k events. The corresponding draw output is below:
+
+![categories.png](categories.png)
+
 
 
