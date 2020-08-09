@@ -2,6 +2,8 @@
 
 ## Pre-requesites
 
+You will need the Python interfaces to [Pythia](https://pypi.org/project/numpythia/), [FastJet](https://pypi.org/project/pyjet/), [PDG tools](https://pypi.org/project/particle/), and [HEP tools](https://pypi.org/project/scikit-hep/). All provided by [scikit-hep](https://scikit-hep.org/).
+
 ```
 pip install numpythia --user
 pip install pyjet --user
