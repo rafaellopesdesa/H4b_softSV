@@ -26,7 +26,7 @@ python draw_findB.py [h5 file]
 
 ## Pythia configuation and example run
 
-The Pythia configuration is set on `decay_findB.cmnd`. There you can set:
+The Pythia configuration is set on [decay_findB.cmnd](https://github.com/rafaellopesdesa/H4b_softSV/blob/master/decay_findB.cmnd). There you can set:
 
 - Pythia tune: currently ATLAS A14 (line *Tune:pp*)
 - a-boson mass: currently 60 GeV (line *36:m0*, you should also set *36:mMin* and *36:mMax*)
